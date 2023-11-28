@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    display: flex;
+    margin: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    font-size: 20px;
+}
+
+a:hover{
+    color: rgb(5, 148, 230);
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'header header header header'
+    'article1 article2 article3 article4';
+    margin-bottom: 60px;
+}
+
+section h2 {
+    grid-area: header;
+    text-align: center;
+    font-size: 40px;
+    margin: 40px
+}
+
+section article:nth-child(1){
+    grid-area: article1;
+}
+section article:nth-child(2){
+    grid-area: article2;
+}
+section article:nth-child(3){
+    grid-area: article3;
+}
+section article:nth-child(4){
+    grid-area: article4;
+}
+
+figure{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+figure:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+figure:hover .title{
+    color: rgb(5, 148, 230);
+    font-weight: bold;
+}
+
+figure:hover img{
+    transform: scale(1.15);
+}
+
+img{
+    transition: all 0.3s;
+    width: 200px;
+}
+#logo{
+    width: 50px;
+}
+#logo:hover{
+    transform: scale(1.15);
+    cursor: pointer;   
+}
+.prix{
+    font-weight: bold;
+}
+
+figcaption {
+    margin: 10px;
+}
+
+footer{
+    padding-bottom: 50px;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: rgb(5, 148, 230);
+    margin: auto auto 50px auto;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+footer li{
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+footer p{
+    text-align: center;
+    margin: 20px;
+}
+
+.fa-solid{
+    margin: 20px 0;
+}
