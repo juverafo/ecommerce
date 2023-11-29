@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    
 }
 html{
     scroll-behavior: smooth;
@@ -15,48 +14,27 @@ body{
 
 nav{
     display: flex;
-    margin: 50px;
+    margin: 3%;;
 }
-
+h2{
+    text-align: center;
+    text-transform: capitalize;
+}
 a{
     text-decoration: none;
     color: black;
     margin: auto;
     font-size: 20px;
 }
+section{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 a:hover{
     color: rgb(5, 148, 230);
 }
 
-section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    'header header header header'
-    'article1 article2 article3 article4';
-    margin-bottom: 60px;
-}
-
-section h2 {
-    grid-area: header;
-    text-align: center;
-    font-size: 40px;
-    margin: 40px
-}
-
-section article:nth-child(1){
-    grid-area: article1;
-}
-section article:nth-child(2){
-    grid-area: article2;
-}
-section article:nth-child(3){
-    grid-area: article3;
-}
-section article:nth-child(4){
-    grid-area: article4;
-}
 
 figure{
     border-radius: 10px;
@@ -71,13 +49,13 @@ figure:hover{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-figure:hover .title{
+article:hover figcaption{
     color: rgb(5, 148, 230);
     font-weight: bold;
 }
 
 figure:hover img{
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 img{
