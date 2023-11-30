@@ -176,7 +176,7 @@ title.forEach((item) => {
       content += `
         <article>
           <figure>
-            <img src="${item2.img}" alt="">
+            <img id="${item2.id}" src="${item2.img}" alt="">
             <figcaption>${item2.title}</figcaption>
             <figcaption>€ ${item2.price}<a class="shopping"><p><i class="fa-solid fa-cart-shopping shopping"></i></p></a></figcaption>
           </figure>
@@ -197,22 +197,40 @@ main.innerHTML = content;
 // //   });
 // // });
 
-function changePicture(card) {
-  card.addEventListener("mouseover", function () {
-    card.style.background = "red";
-  });
-  card.addEventListener("mouseout", function () {
-    card.style.background = "blue";
-  });
+function changePicture(event) {
+  if (event.target.tagName === "IMG") {
+    cards.forEach(function (item) {
+      if (item.id === parseInt(event.target.id)) {
+        console.log(
+          event.target.src
+            .split(".png")[0]
+            .substring(event.target.src.split(".png")[0].length - 1)
+        );
+        let number = event.target.src
+          .split(".png")[0]
+          .substring(event.target.src.split(".png")[0].length - 1);
+        if (number === "1") {
+          event.target.src = item.img2;
+        } else {
+          event.target.src = item.img;
+        }
+        // }else if(event.type==="mouseout"){
+        //   event.target.src=item.img1;
+        //
+        // }
+      }
+    });
+  }
 }
 
-console.log(main.addEventListener("mouseover", changePicture));
+main.addEventListener("mouseover", changePicture);
+main.addEventListener("mouseout", changePicture);
 
-cards.forEach((card) => {
-  if (card.target === cards.img) {
-    changePicture(card);
-  }
-});
+// cards.forEach((card) => {
+//   if (card.target === cards.img) {
+//     changePicture(card);
+//   }
+// });
 
 // let image = document.querySelector("img");
 
