@@ -187,3 +187,39 @@ title.forEach((item) => {
 });
 
 main.innerHTML = content;
+
+// let image = document.querySelectorAll("img");
+// console.log(image);
+
+// // image.forEach(item, function () {
+// //   item.addEventListener("click", function () {
+// //     item = item.img2;
+// //   });
+// // });
+
+function changePicture(card) {
+  card.addEventListener("mouseover", function () {
+    card.style.background = "red";
+  });
+  card.addEventListener("mouseout", function () {
+    card.style.background = "blue";
+  });
+}
+
+console.log(main.addEventListener("mouseover", changePicture));
+
+cards.forEach((card) => {
+  if (card.target === cards.img) {
+    changePicture(card);
+  }
+});
+
+// let image = document.querySelector("img");
+
+// // console.log(image);
+// image.addEventListener("mouseover", function () {
+//   this.src = "./img/image2.jpg";
+// });
+// image.addEventListener("mouseout", function () {
+//   this.src = "./img/image1.jpg";
+// });
