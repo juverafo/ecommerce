@@ -188,15 +188,6 @@ title.forEach((item) => {
 
 main.innerHTML = content;
 
-// let image = document.querySelectorAll("img");
-// console.log(image);
-
-// // image.forEach(item, function () {
-// //   item.addEventListener("click", function () {
-// //     item = item.img2;
-// //   });
-// // });
-
 function changePicture(event) {
   if (event.target.tagName === "IMG") {
     cards.forEach(function (item) {
@@ -225,19 +216,3 @@ function changePicture(event) {
 
 main.addEventListener("mouseover", changePicture);
 main.addEventListener("mouseout", changePicture);
-
-// cards.forEach((card) => {
-//   if (card.target === cards.img) {
-//     changePicture(card);
-//   }
-// });
-
-// let image = document.querySelector("img");
-
-// // console.log(image);
-// image.addEventListener("mouseover", function () {
-//   this.src = "./img/image2.jpg";
-// });
-// image.addEventListener("mouseout", function () {
-//   this.src = "./img/image1.jpg";
-// });
